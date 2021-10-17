@@ -23,6 +23,13 @@
   //Chamda de dados
     $dados = mysqli_query($conn, $sql);
  
+    //teste de data recovery (Success!!) :)
+    while ( $linha = mysqli_fetch_assoc($dados)) {
+      foreach ($linha as $key => $value) {
+        echo "$key: $value</br>";
+      }
+    }
+
   ?>
 
       <div class="container">
