@@ -22,7 +22,7 @@
 
   //Chamda de dados
     $dados = mysqli_query($conn, $sql);
-
+ 
   ?>
 
       <div class="container">
