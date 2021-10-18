@@ -11,6 +11,8 @@
     <title>MC2 Teste - Rafael Varela</title>
   </head>
   <body>
+    <!-- Por favor me dê essa chance, eu aprendo muito rápido, é a segunda vez que uso bootstrap e a primeira que faço um CRUD, eu vou
+  dar 100% de mim e garanto que não vou deixar a desejar :) -->
       <div class="container">
           <div class="row">
               <div class="col">

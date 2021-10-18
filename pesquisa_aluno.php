@@ -55,8 +55,9 @@
       $dt_nascimento = $linha['dt_nascimento'];
       $dt_nascimento = mostra_data($dt_nascimento);
 
-      //chamando dados do bd e exibindo em tela de acordo com pesquisa por nome
-      //é necessario adicionar a função de editar e apagar cada aluno
+      //Foi aqui que parei, o bootstrap ta me trolando e não tá chamando o modal
+      //Preciso fazer o modal funcionar para passar a função para exclusão
+
       echo "<tr>
       <th scope ='row'>$cod_aluno</th>  
       <td>$nome</td>
@@ -64,7 +65,7 @@
       <td>$dt_nascimento</td>
       <td width=150px>
         <a href='aluno_edit.php?id=$cod_aluno' class='btn btn-success btn-sm'>Editar</a>
-        <a href='#' class='btn btn-danger btn-sm' data-toggle='modal' data-target='exampleModal'>Excluir</a>
+        <a href='#' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#exampleModal'>Excluir</a>
       </td>
       </tr>";
 
