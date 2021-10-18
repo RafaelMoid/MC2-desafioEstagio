@@ -17,7 +17,7 @@
 
     include "conexao.php";
 
-    $sql = "SELECT * FROM alunos WHERE nome LIKE '%$pesquisa%' ";
+    $sql = "SELECT * FROM prof WHERE nome LIKE '%$pesquisa%' ";
 
   //Chamda de dados
     $dados = mysqli_query($conn, $sql);
