@@ -15,12 +15,13 @@
           <div class="row">
               <div class="col">
               <div class="jumbotron">
-                    <img src="./src/MC2.png" class="img-fluid" alt="Responsive image">
-                    <h1 class="display-4">Seja bem vindo ao MC2 sistema administrativo</h1>
+                    <img src="./src/MC2.png" class="img-fluid" alt="Responsive image" >
+                    <h3 class="display-5" >Seja bem vindo ao MC2 sistema administrativo</h3>
+                    <p class="lead">Aqui você pode gerenciar suas escola, universidade ou curso de maneira simplificada.</p>
                     <!-- Por algum motivo o break não funcionou fora da tag <p>, ajeita isso se der tempo. -->
                     <p></br></p>
                     <h3>Cadastro</h3>
-                    <p class="lead">Aqui você pode gerenciar suas escola, universidade ou curso de maneira simplificada.</p>
+                    
                     <p>Cadastre alunos, professores e disciplinas com poucos cliques.</p>
                     <a class="btn btn-success btn-lg" href="aluno.php" role="button">Cadastre estudantes</a>
                     <a class="btn btn-success btn-lg" href="prof.php" role="button">Cadastre professores</a>

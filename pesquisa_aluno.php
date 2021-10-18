@@ -29,7 +29,7 @@
                 <h2>Pesquisar</h2>
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline" action="pesquisa_aluno.php" method="POST">
-                        <p>Pesquise aqui estudantes, professores e disciplinas.</p>
+                        <p>Pesquise estudantes por aqui.</p>
                         <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="busca" autofocus>
                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar por nome</button>
 
@@ -64,7 +64,7 @@
       <td>$dt_nascimento</td>
       <td width=150px>
         <a href='aluno_edit.php?id=$cod_aluno' class='btn btn-success btn-sm'>Editar</a>
-        <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+        <a href='#exampleModal' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#exampleModal'>Excluir</a>
       </td>
       </tr>";
 
@@ -83,6 +83,29 @@
       </div>
     
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
