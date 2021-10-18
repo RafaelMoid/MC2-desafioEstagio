@@ -22,15 +22,8 @@
 
   //Chamda de dados
     $dados = mysqli_query($conn, $sql);
- 
-    //teste de data recovery (Success!!) :)
-    while ( $linha = mysqli_fetch_assoc($dados)) {
-      foreach ($linha as $key => $value) {
-        echo "$key: $value</br>";
-      }
-    }
-
-  ?>
+    ?>
+    
 
       <div class="container">
           <div class="row">
@@ -40,7 +33,7 @@
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline" action="pesquisa_mat.php" method="POST">
                         <p>Pesquise aqui por disciplinas.</p>
-                     <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="busca">
+                     <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="busca" autofocus>
                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
 
                      <table class="table table-hover">
@@ -54,23 +47,38 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+  <?php
+    //teste de data recovery (Success!!) :)
+     
+    while ( $linha = mysqli_fetch_assoc($dados)) {
+      $cod_disciplina = $linha['cod_disciplina'];
+      $nome = $linha['nome']; 
+      $prof = $linha['prof']; 
+      $alunos = $linha['alunos'];
+      
+      //chamando dados do bd e exibindo em tela de acordo com pesquisa
+      //é necessario colocar mais funções de pesquina no botão
+      //Listagem de disciplinas.
+      //Código e nome da disciplina.
+      //Nome do professor.
+      //Quantidade de estudantes que estão matriculados na disciplina.
+      //Detalhamento da disciplina.
+      //Código e nome da disciplina.
+      //Nome do Professor.
+      //Lista de Estudantes matriculados na disciplina
+      echo "<tr>
+      <th scope ='row'>$cod_disciplina</th>  
+      <td>$nome</td>
+      <td>$prof</td>
+      <td>$alunos</td>
+      </tr>";
+
+    }
+
+  ?>
+
+   
   </tbody>
 </table>
 
