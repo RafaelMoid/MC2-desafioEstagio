@@ -40,7 +40,7 @@
                   </div>
                   <div>
                     <input type="submit" class="btn btn-success" value="Salvar alterações">
-                    <input type="hidden" name="id" value="<?php echo $linha['cod_prof'] ?>" />
+                    <input type="hidden" name="id" value="<?php echo $linha['cod_prof'] ?>" >
                   </div>
                 </form>
                 </br>

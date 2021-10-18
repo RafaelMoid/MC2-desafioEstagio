@@ -41,7 +41,7 @@
                   </div>
                   <div>
                     <input type="submit" class="btn btn-success" value="Salvar alterações">
-                    <input type="hidden" name="id" value="<?php echo $linha['cod_aluno']; ?>" />
+                    <input type="hidden" name="id" value="<?php echo $linha['cod_aluno']; ?>" >
                   </div>
                 </form>
               </br>
