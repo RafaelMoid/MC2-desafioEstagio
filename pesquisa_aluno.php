@@ -64,7 +64,7 @@
       <td>$dt_nascimento</td>
       <td width=150px>
         <a href='aluno_edit.php?id=$cod_aluno' class='btn btn-success btn-sm'>Editar</a>
-        <a href='#exampleModal' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#exampleModal'>Excluir</a>
+        <a href='#' class='btn btn-danger btn-sm' data-toggle='modal' data-target='exampleModal'>Excluir</a>
       </td>
       </tr>";
 
@@ -97,15 +97,18 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <p>Deseja excluir o cadastro deste estudante?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-danger">Excluir</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
