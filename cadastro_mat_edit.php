@@ -8,33 +8,27 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Cadastrar aluno</title>
+    <title>MC2 Teste</title>
   </head>
   <body>
       <div class="container">
           <div class="row">
-              <div class="col">
-                <h2>Cadastrar aluno</h2>
-                <form action="cadastro_aluno.php" method="POST">
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" name="nome">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CPF(apenas números)</label>
-                    <input type="number" class="form-control" name="cpf">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Data de nascimento</label>
-                    <input type="date" class="form-control" name="dt_nascimento">
-                  </div>
-                  <div>
-                    <input type="submit" class="btn btn-success">
-                  </div>
-                </form>
-              </br>
-              <a href="index.php" class="btn btn-primary">Voltar ao início</a>
-              </div>
+           <?php 
+                include "conexao.php";
+
+               $id = $_POST['id'];
+               $nome = $_POST['nome']; 
+               $prof = $_POST['prof']; 
+               $alunos = $_POST['alunos']; 
+
+               $sql = "UPDATE `disciplina` set `nome` = '$nome', `prof` = '$prof', `alunos` = '$alunos') WHERE cod_disciplina = $id";
+
+               if (mysqli_query($conn, $sql)) {
+                  mensagem("$nome cadastrado com sucesso", 'success');
+               } else
+                    mensagem( "$nome NÃO foi cadastrado", 'danger' );
+           ?> 
+           <a href="index.php" class="btn btn-success">Voltar</a>
           </div>
       </div>
     

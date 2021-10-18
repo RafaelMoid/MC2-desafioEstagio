@@ -26,7 +26,7 @@
           <div class="row">
               <div class="col">
                 <h2>Editar cadastro de disciplina</h2>
-                <form action="cadastro_mat.php" method="POST">
+                <form action="cadastro_mat_edit.php" method="POST">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nome</label>
                     <input type="text" class="form-control" name="nome" value="<?php echo $linha['nome']; ?>" >
@@ -41,6 +41,7 @@
                   </div>
                   <div>
                     <input type="submit" class="btn btn-success" value="Salvar alterações">
+                    <input type="hidden" name="id" value="<?php echo $linha['cod_disciplina']; ?>" />
                   </div>
                 </form>
                 </br>

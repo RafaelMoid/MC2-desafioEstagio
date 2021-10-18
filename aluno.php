@@ -8,40 +8,29 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Editar cadastro de aluno</title>
+    <title>Cadastrar aluno</title>
   </head>
   <body>
-
-  <?php
-    include "conexao.php";
-
-    $id = $_GET['id'] ?? '';
-    $sql = "SELECT * FROM alunos WHERE cod_aluno = $id";
-
-    $dados = mysqli_query($conn, $sql);
-    $linha = mysqli_fetch_assoc($dados);
-  ?>
-
       <div class="container">
           <div class="row">
               <div class="col">
-                <h2>Editar cadastro de aluno</h2>
-                <form action="cadastro_aluno_edit.php" method="POST">
+                <h2>Cadastrar aluno</h2>
+                <form action="cadastro_aluno.php" method="POST">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" name="nome" value="<?php echo $linha['nome']; ?>" >
+                    <input type="text" class="form-control" name="nome">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">CPF(apenas números)</label>
-                    <input type="number" class="form-control" name="cpf" value="<?php echo $linha['cpf']; ?>" >
+                    <input type="number" class="form-control" name="cpf">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Data de nascimento</label>
-                    <input type="date" class="form-control" name="dt_nascimento" value="<?php echo $linha['dt_nascimento']; ?>" >
+                    <input type="date" class="form-control" name="dt_nascimento">
                   </div>
                   <div>
-                    <input type="submit" class="btn btn-success" value="Salvar alterações">
-                    <input type="hidden" name="id" value="<?php echo $linha['cod_aluno']; ?>" />
+                    <input type="submit" class="btn btn-success">
+                    <input type="hidden" name="id" value="<?php echo $linha['cod_disciplina']; ?>" />
                   </div>
                 </form>
               </br>

@@ -22,7 +22,7 @@
                     <h3>Cadastro</h3>
                     <p class="lead">Aqui você pode gerenciar suas escola, universidade ou curso de maneira simplificada.</p>
                     <p>Cadastre alunos, professores e disciplinas com poucos cliques.</p>
-                    <a class="btn btn-success btn-lg" href="aluno.html" role="button">Cadastre estudantes</a>
+                    <a class="btn btn-success btn-lg" href="aluno.php" role="button">Cadastre estudantes</a>
                     <a class="btn btn-success btn-lg" href="prof.php" role="button">Cadastre professores</a>
                     <a class="btn btn-success btn-lg" href="mat.php" role="button">Cadastre disciplinas</a>
                     <hr class="my-4">

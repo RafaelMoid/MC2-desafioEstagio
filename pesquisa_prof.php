@@ -25,7 +25,7 @@
       <div class="container">
           <div class="row">
               <div class="col">
-              <img src="./src/MC2.png" class="img-fluid" alt="Responsive image">
+              <img src="./src/MC2.png" class="img-fluid" alt="Responsive image" >
                 <h2>Pesquisar</h2>
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline" action="pesquisa_prof.php" method="POST">
