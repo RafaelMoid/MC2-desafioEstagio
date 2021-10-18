@@ -52,6 +52,7 @@
       $nome = $linha['nome']; 
       $cpf = $linha['cpf']; 
       $dt_nascimento = $linha['dt_nascimento'];
+      $dt_nascimento = mostra_data($dt_nascimento);
       
       //chamando dados do bd e exibindo em tela de acordo com pesquisa por nome
       //é necessario adicionar a função de editar e apagar cada aluno

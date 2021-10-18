@@ -40,6 +40,7 @@
       <th scope="col">Nome</th>
       <th scope="col">CPF</th>
       <th scope="col">Data de nascimento</th>
+      <th scope="col">Funções</th>
       
     </tr>
   </thead>
@@ -52,7 +53,8 @@
       $nome = $linha['nome']; 
       $cpf = $linha['cpf']; 
       $dt_nascimento = $linha['dt_nascimento'];
-      
+      $dt_nascimento = mostra_data($dt_nascimento);
+
       //chamando dados do bd e exibindo em tela de acordo com pesquisa por nome
       //é necessario adicionar a função de editar e apagar cada aluno
       echo "<tr>
@@ -60,6 +62,10 @@
       <td>$nome</td>
       <td>$cpf</td>
       <td>$dt_nascimento</td>
+      <td width=150px>
+        <a href='#' class='btn btn-success btn-sm'>Editar</a>
+        <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+      </td>
       </tr>";
 
     }
