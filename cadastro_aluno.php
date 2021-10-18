@@ -27,7 +27,7 @@
                } else
                     mensagem( "$nome NÃO foi cadastrado", 'danger' );
            ?> 
-           <a href="index.html" class="btn btn-success">Voltar</a>
+           <a href="index.php" class="btn btn-success">Voltar</a>
           </div>
       </div>
     

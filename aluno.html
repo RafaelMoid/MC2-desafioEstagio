@@ -21,7 +21,7 @@
                     <input type="text" class="form-control" name="nome">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CPF</label>
+                    <label for="exampleInputPassword1" class="form-label">CPF(apenas números)</label>
                     <input type="number" class="form-control" name="cpf">
                   </div>
                   <div class="mb-3">

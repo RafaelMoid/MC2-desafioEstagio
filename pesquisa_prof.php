@@ -48,7 +48,7 @@
     //teste de data recovery (Success!!) :)
      
     while ( $linha = mysqli_fetch_assoc($dados)) {
-      $cod_aluno = $linha['cod_aluno'];
+      $cod_prof = $linha['cod_prof'];
       $nome = $linha['nome']; 
       $cpf = $linha['cpf']; 
       $dt_nascimento = $linha['dt_nascimento'];
@@ -56,7 +56,7 @@
       //chamando dados do bd e exibindo em tela de acordo com pesquisa por nome
       //é necessario adicionar a função de editar e apagar cada aluno
       echo "<tr>
-      <th scope ='row'>$cod_aluno</th>  
+      <th scope ='row'>$cod_prof</th>  
       <td>$nome</td>
       <td>$cpf</td>
       <td>$dt_nascimento</td>
