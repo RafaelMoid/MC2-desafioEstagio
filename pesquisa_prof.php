@@ -11,17 +11,27 @@
     <title>MC2 Teste - Rafael Varela</title>
   </head>
   <body>
-    <!-- Inserir aqui a ferramenta de pesquisa criada em pesquis_mat.php -->
+     <!-- Tratamento de dados para requisição no BD -->
+  <?php
+    $pesquisa = $_POST['busca'] ?? '';
+
+    include "conexao.php";
+
+    $sql = "SELECT * FROM alunos WHERE nome LIKE '%$pesquisa%' ";
+
+  //Chamda de dados
+    $dados = mysqli_query($conn, $sql);
+    ?>
       <div class="container">
           <div class="row">
               <div class="col">
               <img src="./src/MC2.png" class="img-fluid" alt="Responsive image">
                 <h2>Pesquisar</h2>
                 <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline" action="pesquisa_pessoas.php" method="POST">
-                        <p>Pesquise aqui estudantes, professores e disciplinas.</p>
-                     <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                    <form class="form-inline" action="pesquisa_prof.php" method="POST">
+                        <p>Pesquise por professores aqui.</p>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquise aqui" aria-label="Search" name="busca" autofocus>
+                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar por nome</button>
 
                      <table class="table table-hover">
   <thead>
@@ -34,23 +44,27 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  <?php
+    //teste de data recovery (Success!!) :)
+     
+    while ( $linha = mysqli_fetch_assoc($dados)) {
+      $cod_aluno = $linha['cod_aluno'];
+      $nome = $linha['nome']; 
+      $cpf = $linha['cpf']; 
+      $dt_nascimento = $linha['dt_nascimento'];
+      
+      //chamando dados do bd e exibindo em tela de acordo com pesquisa por nome
+      //é necessario adicionar a função de editar e apagar cada aluno
+      echo "<tr>
+      <th scope ='row'>$cod_aluno</th>  
+      <td>$nome</td>
+      <td>$cpf</td>
+      <td>$dt_nascimento</td>
+      </tr>";
+
+    }
+
+  ?>
   </tbody>
 </table>
 

@@ -22,7 +22,7 @@
                     <h3>Cadastro</h3>
                     <p class="lead">Aqui você pode gerenciar suas escola, universidade ou curso de maneira simplificada.</p>
                     <p>Cadastre alunos, professores e disciplinas com poucos cliques.</p>
-                    <a class="btn btn-success btn-lg" href="aluno.html" role="button">Cadastre alunos</a>
+                    <a class="btn btn-success btn-lg" href="aluno.html" role="button">Cadastre estudantes</a>
                     <a class="btn btn-success btn-lg" href="prof.php" role="button">Cadastre professores</a>
                     <a class="btn btn-success btn-lg" href="mat.php" role="button">Cadastre disciplinas</a>
                     <hr class="my-4">
@@ -30,7 +30,8 @@
                     <p></br></p>
                     <h3>Pesquisa</h3>
                     <p>Aqui você consegue informações sobre alunos, professores e disciplinas.</p>
-                    <a class="btn btn-success btn-lg" href="pesquisa_pessoas.php" role="button">Pesquisar pessoas</a>
+                    <a class="btn btn-success btn-lg" href="pesquisa_aluno.php" role="button">Pesquisar estudantes</a>
+                    <a class="btn btn-success btn-lg" href="pesquisa_prof.php" role="button">Pesquisar professores</a>
                     <a class="btn btn-success btn-lg" href="pesquisa_mat.php" role="button">Pesquisar disciplinas</a>
                     <hr class="my-4">
                   </div>
