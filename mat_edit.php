@@ -8,28 +8,39 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Cadastrar disciplina</title>
+    <title>Editar cadastro de disciplina</title>
   </head>
   <body>
+
+  <?php
+    include "conexao.php";
+
+    $id = $_GET['id'] ?? '';
+    $sql = "SELECT * FROM disciplina WHERE cod_disciplina = $id";
+
+    $dados = mysqli_query($conn, $sql);
+    $linha = mysqli_fetch_assoc($dados);
+  ?>
+
       <div class="container">
           <div class="row">
               <div class="col">
-                <h2>Cadastrar disciplina</h2>
+                <h2>Editar cadastro de disciplina</h2>
                 <form action="cadastro_mat.php" method="POST">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name="nome">
+                    <input type="text" class="form-control" name="nome" value="<?php echo $linha['nome']; ?>" >
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Codigo do professor</label>
-                    <input type="number" class="form-control" name="prof">
+                    <input type="number" class="form-control" name="prof" value="<?php echo $linha['prof']; ?>">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">alunos</label>
-                    <input type="text" class="form-control" name="alunos">
+                    <input type="text" class="form-control" name="alunos" value="<?php echo $linha['alunos']; ?>">
                   </div>
                   <div>
-                    <input type="submit" class="btn btn-success">
+                    <input type="submit" class="btn btn-success" value="Salvar alterações">
                   </div>
                 </form>
                 </br>

@@ -63,7 +63,7 @@
       <td>$cpf</td>
       <td>$dt_nascimento</td>
       <td width=150px>
-        <a href='#' class='btn btn-success btn-sm'>Editar</a>
+        <a href='aluno_edit.php?id=$cod_aluno' class='btn btn-success btn-sm'>Editar</a>
         <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
       </td>
       </tr>";
@@ -74,7 +74,8 @@
   </tbody>
 </table>
 
-                     <a href="index.php" class="btn btn-success">Início</a>
+</br>
+                <a href="index.php" class="btn btn-primary">Voltar ao início</a>
                     </form>
 </nav>
               </div>

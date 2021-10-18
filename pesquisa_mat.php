@@ -43,6 +43,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Professor</th>
       <th scope="col">Quantidade de alunos</th>
+      <th scope="col">Funções</th>
       
     </tr>
   </thead>
@@ -72,6 +73,10 @@
       <td>$nome</td>
       <td>$prof</td>
       <td>$alunos</td>
+      <td width=150px>
+        <a href='mat_edit.php?id=$cod_disciplina' class='btn btn-success btn-sm'>Editar</a>
+        <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+      </td>
       </tr>";
 
     }
@@ -82,7 +87,8 @@
   </tbody>
 </table>
 
-                     <a href="index.php" class="btn btn-success">Início</a>
+</br>
+                <a href="index.php" class="btn btn-primary">Voltar ao início</a>
                     </form>
 </nav>
               </div>
